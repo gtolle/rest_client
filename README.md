@@ -1,7 +1,7 @@
 Rust REST Client
 ================
 
-A simple HTTP and REST client for Rust, inspired by Ruby's rest-client.
+A simple HTTP and REST client for Rust, inspired by Ruby's [rest-client](https://github.com/rest-client/rest-client).
 
 Built on top of the Hyper HTTP library.
 
@@ -62,5 +62,6 @@ TODO
 * Examine what parts of Hyper should get re-exposed
 * Add support for cookies
 * Multipart POST
+* Unit tests
 * Testing in real applications
 * Refactoring
