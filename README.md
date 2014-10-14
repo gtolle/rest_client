@@ -91,8 +91,27 @@ pub struct TestStruct  {
 }
 ```
 
+Examples
+--------
+
+```
+    println!("{}", RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap());
+
+    let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
+    let response_json = json::from_str(response.body.as_slice()).unwrap();
+    println!("{}", response_json.find(&"data".to_string()).unwrap()
+                                .find(&"children".to_string()));
+
+    println!("{}", RestClient::post_with_params("http://www.reddit.com/api/login.json", 
+                                                [("api_type", "json"),
+                                                 ("user", "myusername"),
+                                                 ("passwd", "mypassword"),
+                                                 ("rem", "True")]).unwrap());
+
+```
+
 TODO
-====
+----
 
 * Examine what parts of Hyper should get re-exposed
 * Add support for cookies
