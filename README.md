@@ -12,6 +12,16 @@ Built on top of the Hyper HTTP library.
 Usage
 -----
 
+First, add the dependency to your `Cargo.toml`:
+
+```
+[dependencies.rest_client]
+
+git = "https://github.com/gtolle/rest_client"
+```
+
+Then, `cargo update`, write your code, `cargo build`, `cargo run`, etc.
+
 ```
 extern crate rest_client;
 extern crate serialize;
