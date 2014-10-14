@@ -42,8 +42,7 @@ fn main() {
         data_str: "toto".to_string(),
         data_vector: vec![2,3,4,5],
     };
-
-
+    
     println!("{}", RestClient::post("http://example.com/resource",
                                     json::encode(&object).as_slice(), 
                                     "application/json").unwrap());
