@@ -7,6 +7,8 @@ The goal: make common REST requests with the fewest lines of code.
 
 Built on top of the Hyper HTTP library.
 
+[Full API Documentation](https://gtolle.github.com/rest_client)
+
 Usage
 -----
 
