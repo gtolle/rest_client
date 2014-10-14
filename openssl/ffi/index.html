@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ffi` mod in crate `openssl`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ffi">
+
+    <title>openssl::ffi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>openssl</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../asn1/index.html'>asn1</a><a class='mod ' href='../bio/index.html'>bio</a><a class='mod ' href='../bn/index.html'>bn</a><a class='mod ' href='../crypto/index.html'>crypto</a><a class='mod current' href='../ffi/index.html'>ffi</a><a class='mod ' href='../ssl/index.html'>ssl</a><a class='mod ' href='../x509/index.html'>x509</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>openssl</a>::<wbr><a class='mod' href=''>ffi</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-6200' href='../../src/openssl/src/ffi.rs.html#1-442'>[src]</a></span></h1>
+<h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use bn::<a class='struct' href='../../openssl/bn/struct.BIGNUM.html' title='openssl::bn::BIGNUM'>BIGNUM</a>;</code></td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.EVP_MD_CTX.html'
+                               title='openssl::ffi::EVP_MD_CTX'>EVP_MD_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.HMAC_CTX.html'
+                               title='openssl::ffi::HMAC_CTX'>HMAC_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.X509V3_CTX.html'
+                               title='openssl::ffi::X509V3_CTX'>X509V3_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const BIO_CTRL_EOF: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>2</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const CRYPTO_LOCK: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>1</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const MBSTRING_ASC: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>MBSTRING_FLAG | 1</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const MBSTRING_BMP: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>MBSTRING_FLAG | 2</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const MBSTRING_FLAG: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>0x1000</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const MBSTRING_UNIV: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>MBSTRING_FLAG | 4</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const MBSTRING_UTF8: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>MBSTRING_FLAG</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const NID_ext_key_usage: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>126</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const NID_key_usage: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>83</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_CTRL_SET_TLSEXT_HOSTNAME: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>55</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_NONE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>0</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_SSL: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>1</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_SYSCALL: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>5</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_WANT_ACCEPT: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>8</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_WANT_CONNECT: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>7</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_WANT_READ: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>2</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_WANT_WRITE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>3</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_WANT_X509_LOOKUP: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>4</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_ERROR_ZERO_RETURN: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>6</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_VERIFY_NONE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>0</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const SSL_VERIFY_PEER: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>1</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const TLSEXT_NAMETYPE_host_name: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_long.html' title='libc::types::os::arch::c95::c_long'>c_long</a></code><code> = </code><code>0</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const V_ASN1_GENERALIZEDTIME: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>24</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const V_ASN1_UTCTIME: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>23</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_FILETYPE_ASN1: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>2</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_FILETYPE_DEFAULT: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>3</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_FILETYPE_PEM: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>1</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_AKID_ISSUER_SERIAL_MISMATCH: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>31</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_AKID_SKID_MISMATCH: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>30</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_APPLICATION_VERIFICATION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>50</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_CHAIN_TOO_LONG: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>22</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_HAS_EXPIRED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>10</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_NOT_YET_VALID: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>9</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_REJECTED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>28</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_REVOKED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>23</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_SIGNATURE_FAILURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>7</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CERT_UNTRUSTED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>27</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CRL_HAS_EXPIRED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>12</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CRL_NOT_YET_VALID: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>11</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CRL_PATH_VALIDATION_ERROR: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>54</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_CRL_SIGNATURE_FAILURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>8</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_DEPTH_ZERO_SELF_SIGNED_CERT: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>18</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_DIFFERENT_CRL_SCOPE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>44</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_ERROR_IN_CERT_NOT_AFTER_FIELD: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>14</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_ERROR_IN_CERT_NOT_BEFORE_FIELD: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>13</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_ERROR_IN_CRL_LAST_UPDATE_FIELD: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>15</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_ERROR_IN_CRL_NEXT_UPDATE_FIELD: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>16</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_EXCLUDED_VIOLATION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>48</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_INVALID_CA: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>24</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_INVALID_EXTENSION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>41</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_INVALID_NON_CA: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>37</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_INVALID_POLICY_EXTENSION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>42</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_INVALID_PURPOSE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>26</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_KEYUSAGE_NO_CERTSIGN: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>32</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_KEYUSAGE_NO_CRL_SIGN: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>35</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_KEYUSAGE_NO_DIGITAL_SIGNATURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>39</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_NO_EXPLICIT_POLICY: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>43</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_OUT_OF_MEM: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>17</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_PATH_LENGTH_EXCEEDED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>25</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_PERMITTED_VIOLATION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>47</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_PROXY_CERTIFICATES_NOT_ALLOWED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>40</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_PROXY_PATH_LENGTH_EXCEEDED: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>38</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_SELF_SIGNED_CERT_IN_CHAIN: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>19</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_SUBJECT_ISSUER_MISMATCH: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>29</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_SUBTREE_MINMAX: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>49</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_DECODE_ISSUER_PUBLIC_KEY: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>6</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_DECRYPT_CERT_SIGNATURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>4</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_DECRYPT_CRL_SIGNATURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>5</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_GET_CRL: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>3</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_GET_CRL_ISSUER: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>33</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>2</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>20</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNABLE_TO_VERIFY_LEAF_SIGNATURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>21</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNHANDLED_CRITICAL_CRL_EXTENSION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>36</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNHANDLED_CRITICAL_EXTENSION: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>34</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNNESTED_RESOURCE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>46</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNSUPPORTED_CONSTRAINT_SYNTAX: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>52</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNSUPPORTED_CONSTRAINT_TYPE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>51</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNSUPPORTED_EXTENSION_FEATURE: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>45</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_ERR_UNSUPPORTED_NAME_SYNTAX: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>53</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><code>pub const X509_V_OK: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a></code><code> = </code><code>0</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                </table><h2 id='ffi-fns' class='section-header'><a href="#ffi-fns">Foreign Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ASN1_INTEGER_set.html'
+                               title='openssl::ffi::ASN1_INTEGER_set'>ASN1_INTEGER_set</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ASN1_STRING_type_new.html'
+                               title='openssl::ffi::ASN1_STRING_type_new'>ASN1_STRING_type_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ASN1_TIME_free.html'
+                               title='openssl::ffi::ASN1_TIME_free'>ASN1_TIME_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_ctrl.html'
+                               title='openssl::ffi::BIO_ctrl'>BIO_ctrl</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_free_all.html'
+                               title='openssl::ffi::BIO_free_all'>BIO_free_all</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_new.html'
+                               title='openssl::ffi::BIO_new'>BIO_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_read.html'
+                               title='openssl::ffi::BIO_read'>BIO_read</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_s_mem.html'
+                               title='openssl::ffi::BIO_s_mem'>BIO_s_mem</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BIO_write.html'
+                               title='openssl::ffi::BIO_write'>BIO_write</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_CTX_free.html'
+                               title='openssl::ffi::BN_CTX_free'>BN_CTX_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_CTX_new.html'
+                               title='openssl::ffi::BN_CTX_new'>BN_CTX_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_add.html'
+                               title='openssl::ffi::BN_add'>BN_add</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_bin2bn.html'
+                               title='openssl::ffi::BN_bin2bn'>BN_bin2bn</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_bn2bin.html'
+                               title='openssl::ffi::BN_bn2bin'>BN_bn2bin</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_bn2dec.html'
+                               title='openssl::ffi::BN_bn2dec'>BN_bn2dec</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_clear_bit.html'
+                               title='openssl::ffi::BN_clear_bit'>BN_clear_bit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_clear_free.html'
+                               title='openssl::ffi::BN_clear_free'>BN_clear_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_cmp.html'
+                               title='openssl::ffi::BN_cmp'>BN_cmp</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_div.html'
+                               title='openssl::ffi::BN_div'>BN_div</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_dup.html'
+                               title='openssl::ffi::BN_dup'>BN_dup</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_exp.html'
+                               title='openssl::ffi::BN_exp'>BN_exp</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_gcd.html'
+                               title='openssl::ffi::BN_gcd'>BN_gcd</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_generate_prime_ex.html'
+                               title='openssl::ffi::BN_generate_prime_ex'>BN_generate_prime_ex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_is_bit_set.html'
+                               title='openssl::ffi::BN_is_bit_set'>BN_is_bit_set</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_is_prime_ex.html'
+                               title='openssl::ffi::BN_is_prime_ex'>BN_is_prime_ex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_is_prime_fasttest_ex.html'
+                               title='openssl::ffi::BN_is_prime_fasttest_ex'>BN_is_prime_fasttest_ex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_lshift.html'
+                               title='openssl::ffi::BN_lshift'>BN_lshift</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_lshift1.html'
+                               title='openssl::ffi::BN_lshift1'>BN_lshift1</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mask_bits.html'
+                               title='openssl::ffi::BN_mask_bits'>BN_mask_bits</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_add.html'
+                               title='openssl::ffi::BN_mod_add'>BN_mod_add</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_exp.html'
+                               title='openssl::ffi::BN_mod_exp'>BN_mod_exp</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_inverse.html'
+                               title='openssl::ffi::BN_mod_inverse'>BN_mod_inverse</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_mul.html'
+                               title='openssl::ffi::BN_mod_mul'>BN_mod_mul</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_sqr.html'
+                               title='openssl::ffi::BN_mod_sqr'>BN_mod_sqr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mod_sub.html'
+                               title='openssl::ffi::BN_mod_sub'>BN_mod_sub</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_mul.html'
+                               title='openssl::ffi::BN_mul'>BN_mul</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_new.html'
+                               title='openssl::ffi::BN_new'>BN_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_nnmod.html'
+                               title='openssl::ffi::BN_nnmod'>BN_nnmod</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_num_bits.html'
+                               title='openssl::ffi::BN_num_bits'>BN_num_bits</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_pseudo_rand.html'
+                               title='openssl::ffi::BN_pseudo_rand'>BN_pseudo_rand</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_pseudo_rand_range.html'
+                               title='openssl::ffi::BN_pseudo_rand_range'>BN_pseudo_rand_range</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_rand.html'
+                               title='openssl::ffi::BN_rand'>BN_rand</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_rand_range.html'
+                               title='openssl::ffi::BN_rand_range'>BN_rand_range</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_rshift.html'
+                               title='openssl::ffi::BN_rshift'>BN_rshift</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_rshift1.html'
+                               title='openssl::ffi::BN_rshift1'>BN_rshift1</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_set_bit.html'
+                               title='openssl::ffi::BN_set_bit'>BN_set_bit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_set_negative.html'
+                               title='openssl::ffi::BN_set_negative'>BN_set_negative</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_set_word.html'
+                               title='openssl::ffi::BN_set_word'>BN_set_word</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_sqr.html'
+                               title='openssl::ffi::BN_sqr'>BN_sqr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_sub.html'
+                               title='openssl::ffi::BN_sub'>BN_sub</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.BN_ucmp.html'
+                               title='openssl::ffi::BN_ucmp'>BN_ucmp</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.CRYPTO_free.html'
+                               title='openssl::ffi::CRYPTO_free'>CRYPTO_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.CRYPTO_memcmp.html'
+                               title='openssl::ffi::CRYPTO_memcmp'>CRYPTO_memcmp</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.CRYPTO_num_locks.html'
+                               title='openssl::ffi::CRYPTO_num_locks'>CRYPTO_num_locks</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.CRYPTO_set_locking_callback.html'
+                               title='openssl::ffi::CRYPTO_set_locking_callback'>CRYPTO_set_locking_callback</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ERR_func_error_string.html'
+                               title='openssl::ffi::ERR_func_error_string'>ERR_func_error_string</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ERR_get_error.html'
+                               title='openssl::ffi::ERR_get_error'>ERR_get_error</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ERR_lib_error_string.html'
+                               title='openssl::ffi::ERR_lib_error_string'>ERR_lib_error_string</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ERR_load_crypto_strings.html'
+                               title='openssl::ffi::ERR_load_crypto_strings'>ERR_load_crypto_strings</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.ERR_reason_error_string.html'
+                               title='openssl::ffi::ERR_reason_error_string'>ERR_reason_error_string</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CIPHER_CTX_free.html'
+                               title='openssl::ffi::EVP_CIPHER_CTX_free'>EVP_CIPHER_CTX_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CIPHER_CTX_new.html'
+                               title='openssl::ffi::EVP_CIPHER_CTX_new'>EVP_CIPHER_CTX_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CIPHER_CTX_set_padding.html'
+                               title='openssl::ffi::EVP_CIPHER_CTX_set_padding'>EVP_CIPHER_CTX_set_padding</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CipherFinal.html'
+                               title='openssl::ffi::EVP_CipherFinal'>EVP_CipherFinal</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CipherInit.html'
+                               title='openssl::ffi::EVP_CipherInit'>EVP_CipherInit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_CipherUpdate.html'
+                               title='openssl::ffi::EVP_CipherUpdate'>EVP_CipherUpdate</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_DigestFinal.html'
+                               title='openssl::ffi::EVP_DigestFinal'>EVP_DigestFinal</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_DigestInit.html'
+                               title='openssl::ffi::EVP_DigestInit'>EVP_DigestInit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_DigestUpdate.html'
+                               title='openssl::ffi::EVP_DigestUpdate'>EVP_DigestUpdate</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_MD_CTX_create.html'
+                               title='openssl::ffi::EVP_MD_CTX_create'>EVP_MD_CTX_create</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_MD_CTX_destroy.html'
+                               title='openssl::ffi::EVP_MD_CTX_destroy'>EVP_MD_CTX_destroy</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_PKEY_assign.html'
+                               title='openssl::ffi::EVP_PKEY_assign'>EVP_PKEY_assign</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_PKEY_free.html'
+                               title='openssl::ffi::EVP_PKEY_free'>EVP_PKEY_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_PKEY_get1_RSA.html'
+                               title='openssl::ffi::EVP_PKEY_get1_RSA'>EVP_PKEY_get1_RSA</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_PKEY_new.html'
+                               title='openssl::ffi::EVP_PKEY_new'>EVP_PKEY_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_PKEY_set1_RSA.html'
+                               title='openssl::ffi::EVP_PKEY_set1_RSA'>EVP_PKEY_set1_RSA</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_aes_128_cbc.html'
+                               title='openssl::ffi::EVP_aes_128_cbc'>EVP_aes_128_cbc</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_aes_128_ecb.html'
+                               title='openssl::ffi::EVP_aes_128_ecb'>EVP_aes_128_ecb</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_aes_256_cbc.html'
+                               title='openssl::ffi::EVP_aes_256_cbc'>EVP_aes_256_cbc</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_aes_256_ecb.html'
+                               title='openssl::ffi::EVP_aes_256_ecb'>EVP_aes_256_ecb</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_md5.html'
+                               title='openssl::ffi::EVP_md5'>EVP_md5</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_rc4.html'
+                               title='openssl::ffi::EVP_rc4'>EVP_rc4</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_ripemd160.html'
+                               title='openssl::ffi::EVP_ripemd160'>EVP_ripemd160</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_sha1.html'
+                               title='openssl::ffi::EVP_sha1'>EVP_sha1</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_sha224.html'
+                               title='openssl::ffi::EVP_sha224'>EVP_sha224</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_sha256.html'
+                               title='openssl::ffi::EVP_sha256'>EVP_sha256</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_sha384.html'
+                               title='openssl::ffi::EVP_sha384'>EVP_sha384</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.EVP_sha512.html'
+                               title='openssl::ffi::EVP_sha512'>EVP_sha512</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.HMAC_CTX_init.html'
+                               title='openssl::ffi::HMAC_CTX_init'>HMAC_CTX_init</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.HMAC_Final.html'
+                               title='openssl::ffi::HMAC_Final'>HMAC_Final</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.HMAC_Init_ex.html'
+                               title='openssl::ffi::HMAC_Init_ex'>HMAC_Init_ex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.HMAC_Update.html'
+                               title='openssl::ffi::HMAC_Update'>HMAC_Update</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.PEM_write_bio_PrivateKey.html'
+                               title='openssl::ffi::PEM_write_bio_PrivateKey'>PEM_write_bio_PrivateKey</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.PEM_write_bio_X509.html'
+                               title='openssl::ffi::PEM_write_bio_X509'>PEM_write_bio_X509</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.PKCS5_PBKDF2_HMAC_SHA1.html'
+                               title='openssl::ffi::PKCS5_PBKDF2_HMAC_SHA1'>PKCS5_PBKDF2_HMAC_SHA1</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RAND_bytes.html'
+                               title='openssl::ffi::RAND_bytes'>RAND_bytes</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_generate_key.html'
+                               title='openssl::ffi::RSA_generate_key'>RSA_generate_key</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_private_decrypt.html'
+                               title='openssl::ffi::RSA_private_decrypt'>RSA_private_decrypt</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_public_encrypt.html'
+                               title='openssl::ffi::RSA_public_encrypt'>RSA_public_encrypt</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_sign.html'
+                               title='openssl::ffi::RSA_sign'>RSA_sign</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_size.html'
+                               title='openssl::ffi::RSA_size'>RSA_size</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.RSA_verify.html'
+                               title='openssl::ffi::RSA_verify'>RSA_verify</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_COMP_get_name.html'
+                               title='openssl::ffi::SSL_COMP_get_name'>SSL_COMP_get_name</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_free.html'
+                               title='openssl::ffi::SSL_CTX_free'>SSL_CTX_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_get_ex_data.html'
+                               title='openssl::ffi::SSL_CTX_get_ex_data'>SSL_CTX_get_ex_data</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_get_ex_new_index.html'
+                               title='openssl::ffi::SSL_CTX_get_ex_new_index'>SSL_CTX_get_ex_new_index</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_load_verify_locations.html'
+                               title='openssl::ffi::SSL_CTX_load_verify_locations'>SSL_CTX_load_verify_locations</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_new.html'
+                               title='openssl::ffi::SSL_CTX_new'>SSL_CTX_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_set_cipher_list.html'
+                               title='openssl::ffi::SSL_CTX_set_cipher_list'>SSL_CTX_set_cipher_list</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_set_ex_data.html'
+                               title='openssl::ffi::SSL_CTX_set_ex_data'>SSL_CTX_set_ex_data</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_set_verify.html'
+                               title='openssl::ffi::SSL_CTX_set_verify'>SSL_CTX_set_verify</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_set_verify_depth.html'
+                               title='openssl::ffi::SSL_CTX_set_verify_depth'>SSL_CTX_set_verify_depth</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_use_PrivateKey_file.html'
+                               title='openssl::ffi::SSL_CTX_use_PrivateKey_file'>SSL_CTX_use_PrivateKey_file</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_CTX_use_certificate_file.html'
+                               title='openssl::ffi::SSL_CTX_use_certificate_file'>SSL_CTX_use_certificate_file</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_connect.html'
+                               title='openssl::ffi::SSL_connect'>SSL_connect</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_ctrl.html'
+                               title='openssl::ffi::SSL_ctrl'>SSL_ctrl</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_free.html'
+                               title='openssl::ffi::SSL_free'>SSL_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_SSL_CTX.html'
+                               title='openssl::ffi::SSL_get_SSL_CTX'>SSL_get_SSL_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_current_compression.html'
+                               title='openssl::ffi::SSL_get_current_compression'>SSL_get_current_compression</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_error.html'
+                               title='openssl::ffi::SSL_get_error'>SSL_get_error</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_ex_data_X509_STORE_CTX_idx.html'
+                               title='openssl::ffi::SSL_get_ex_data_X509_STORE_CTX_idx'>SSL_get_ex_data_X509_STORE_CTX_idx</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_rbio.html'
+                               title='openssl::ffi::SSL_get_rbio'>SSL_get_rbio</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_get_wbio.html'
+                               title='openssl::ffi::SSL_get_wbio'>SSL_get_wbio</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_library_init.html'
+                               title='openssl::ffi::SSL_library_init'>SSL_library_init</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_load_error_strings.html'
+                               title='openssl::ffi::SSL_load_error_strings'>SSL_load_error_strings</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_new.html'
+                               title='openssl::ffi::SSL_new'>SSL_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_read.html'
+                               title='openssl::ffi::SSL_read'>SSL_read</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_set_bio.html'
+                               title='openssl::ffi::SSL_set_bio'>SSL_set_bio</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSL_write.html'
+                               title='openssl::ffi::SSL_write'>SSL_write</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSLv23_method.html'
+                               title='openssl::ffi::SSLv23_method'>SSLv23_method</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.SSLv3_method.html'
+                               title='openssl::ffi::SSLv3_method'>SSLv3_method</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.TLSv1_method.html'
+                               title='openssl::ffi::TLSv1_method'>TLSv1_method</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509V3_EXT_conf_nid.html'
+                               title='openssl::ffi::X509V3_EXT_conf_nid'>X509V3_EXT_conf_nid</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509V3_set_ctx.html'
+                               title='openssl::ffi::X509V3_set_ctx'>X509V3_set_ctx</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_EXTENSION_free.html'
+                               title='openssl::ffi::X509_EXTENSION_free'>X509_EXTENSION_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_NAME_add_entry_by_txt.html'
+                               title='openssl::ffi::X509_NAME_add_entry_by_txt'>X509_NAME_add_entry_by_txt</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_STORE_CTX_get_current_cert.html'
+                               title='openssl::ffi::X509_STORE_CTX_get_current_cert'>X509_STORE_CTX_get_current_cert</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_STORE_CTX_get_error.html'
+                               title='openssl::ffi::X509_STORE_CTX_get_error'>X509_STORE_CTX_get_error</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_STORE_CTX_get_ex_data.html'
+                               title='openssl::ffi::X509_STORE_CTX_get_ex_data'>X509_STORE_CTX_get_ex_data</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_add_ext.html'
+                               title='openssl::ffi::X509_add_ext'>X509_add_ext</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_digest.html'
+                               title='openssl::ffi::X509_digest'>X509_digest</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_free.html'
+                               title='openssl::ffi::X509_free'>X509_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_get_serialNumber.html'
+                               title='openssl::ffi::X509_get_serialNumber'>X509_get_serialNumber</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_get_subject_name.html'
+                               title='openssl::ffi::X509_get_subject_name'>X509_get_subject_name</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_gmtime_adj.html'
+                               title='openssl::ffi::X509_gmtime_adj'>X509_gmtime_adj</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_new.html'
+                               title='openssl::ffi::X509_new'>X509_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_set_issuer_name.html'
+                               title='openssl::ffi::X509_set_issuer_name'>X509_set_issuer_name</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_set_notAfter.html'
+                               title='openssl::ffi::X509_set_notAfter'>X509_set_notAfter</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_set_notBefore.html'
+                               title='openssl::ffi::X509_set_notBefore'>X509_set_notBefore</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_set_pubkey.html'
+                               title='openssl::ffi::X509_set_pubkey'>X509_set_pubkey</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_set_version.html'
+                               title='openssl::ffi::X509_set_version'>X509_set_version</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.X509_sign.html'
+                               title='openssl::ffi::X509_sign'>X509_sign</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.d2i_RSAPrivateKey.html'
+                               title='openssl::ffi::d2i_RSAPrivateKey'>d2i_RSAPrivateKey</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.d2i_RSA_PUBKEY.html'
+                               title='openssl::ffi::d2i_RSA_PUBKEY'>d2i_RSA_PUBKEY</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.i2d_RSAPrivateKey.html'
+                               title='openssl::ffi::i2d_RSAPrivateKey'>i2d_RSAPrivateKey</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.i2d_RSA_PUBKEY.html'
+                               title='openssl::ffi::i2d_RSA_PUBKEY'>i2d_RSA_PUBKEY</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.BIO_eof.html'
+                               title='openssl::ffi::BIO_eof'>BIO_eof</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.init.html'
+                               title='openssl::ffi::init'>init</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.ASN1_INTEGER.html'
+                               title='openssl::ffi::ASN1_INTEGER'>ASN1_INTEGER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.ASN1_STRING.html'
+                               title='openssl::ffi::ASN1_STRING'>ASN1_STRING</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.ASN1_TIME.html'
+                               title='openssl::ffi::ASN1_TIME'>ASN1_TIME</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.BIO.html'
+                               title='openssl::ffi::BIO'>BIO</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.BIO_METHOD.html'
+                               title='openssl::ffi::BIO_METHOD'>BIO_METHOD</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.BN_CTX.html'
+                               title='openssl::ffi::BN_CTX'>BN_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.COMP_METHOD.html'
+                               title='openssl::ffi::COMP_METHOD'>COMP_METHOD</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.CRYPTO_EX_DATA.html'
+                               title='openssl::ffi::CRYPTO_EX_DATA'>CRYPTO_EX_DATA</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.CRYPTO_EX_dup.html'
+                               title='openssl::ffi::CRYPTO_EX_dup'>CRYPTO_EX_dup</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.CRYPTO_EX_free.html'
+                               title='openssl::ffi::CRYPTO_EX_free'>CRYPTO_EX_free</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.CRYPTO_EX_new.html'
+                               title='openssl::ffi::CRYPTO_EX_new'>CRYPTO_EX_new</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.ENGINE.html'
+                               title='openssl::ffi::ENGINE'>ENGINE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.EVP_CIPHER.html'
+                               title='openssl::ffi::EVP_CIPHER'>EVP_CIPHER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.EVP_CIPHER_CTX.html'
+                               title='openssl::ffi::EVP_CIPHER_CTX'>EVP_CIPHER_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.EVP_MD.html'
+                               title='openssl::ffi::EVP_MD'>EVP_MD</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.EVP_PKEY.html'
+                               title='openssl::ffi::EVP_PKEY'>EVP_PKEY</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.EVP_PKEY_CTX.html'
+                               title='openssl::ffi::EVP_PKEY_CTX'>EVP_PKEY_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.PrivateKeyWriteCallback.html'
+                               title='openssl::ffi::PrivateKeyWriteCallback'>PrivateKeyWriteCallback</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.RSA.html'
+                               title='openssl::ffi::RSA'>RSA</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SSL.html'
+                               title='openssl::ffi::SSL'>SSL</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SSL_CTX.html'
+                               title='openssl::ffi::SSL_CTX'>SSL_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SSL_METHOD.html'
+                               title='openssl::ffi::SSL_METHOD'>SSL_METHOD</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509.html'
+                               title='openssl::ffi::X509'>X509</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509_CRL.html'
+                               title='openssl::ffi::X509_CRL'>X509_CRL</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509_EXTENSION.html'
+                               title='openssl::ffi::X509_EXTENSION'>X509_EXTENSION</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509_NAME.html'
+                               title='openssl::ffi::X509_NAME'>X509_NAME</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509_REQ.html'
+                               title='openssl::ffi::X509_REQ'>X509_REQ</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.X509_STORE_CTX.html'
+                               title='openssl::ffi::X509_STORE_CTX'>X509_STORE_CTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "openssl";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

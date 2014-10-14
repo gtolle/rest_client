@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `header` mod in crate `hyper`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, header">
+
+    <title>hyper::header - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>hyper</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../client/index.html'>client</a><a class='mod current' href='../header/index.html'>header</a><a class='mod ' href='../http/index.html'>http</a><a class='mod ' href='../method/index.html'>method</a><a class='mod ' href='../mime/index.html'>mime</a><a class='mod ' href='../net/index.html'>net</a><a class='mod ' href='../server/index.html'>server</a><a class='mod ' href='../status/index.html'>status</a><a class='mod ' href='../uri/index.html'>uri</a><a class='mod ' href='../version/index.html'>version</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='../struct.SocketAddr.html'>SocketAddr</a><a class='struct ' href='../struct.Url.html'>Url</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='../enum.HttpError.html'>HttpError</a><a class='enum ' href='../enum.IpAddr.html'>IpAddr</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>hyper</a>::<wbr><a class='mod' href=''>header</a><wbr><a class='stability Experimental' title=''>Experimental</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-2614' href='../../src/hyper/Users/gtolle/.cargo/git/checkouts/hyper-3d407dab77cf6838/master/src/header/mod.rs.html#1-460'>[src]</a></span></h1>
+<div class='docblock'><p>Headers container, and common header fields.</p>
+
+<p>hyper has the opinion that Headers should be strongly-typed, because that&#39;s
+why we&#39;re using Rust in the first place. To set or get any header, an object
+must implement the <code>Header</code> trait from this module. Several common headers
+are already provided, such as <code>Host</code>, <code>ContentType</code>, <code>UserAgent</code>, and others.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Experimental' title='Experimental'></a><a class='mod' href='common/index.html'
+                               title='hyper::header::common'>common</a></td>
+                        <td class='docblock short'><p>Common Headers
+A Collection of Header implementations for common HTTP Headers.</p>
+</td>
+                    </tr>
+                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Experimental' title='Experimental'></a><a class='struct' href='struct.HeaderView.html'
+                               title='hyper::header::HeaderView'>HeaderView</a></td>
+                        <td class='docblock short'><p>Returned with the <code>HeadersItems</code> iterator.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Experimental' title='Experimental'></a><a class='struct' href='struct.Headers.html'
+                               title='hyper::header::Headers'>Headers</a></td>
+                        <td class='docblock short'><p>A map of header fields on requests and responses.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Experimental' title='Experimental'></a><a class='struct' href='struct.HeadersItems.html'
+                               title='hyper::header::HeadersItems'>HeadersItems</a></td>
+                        <td class='docblock short'><p>An <code>Iterator</code> over the fields in a <code>Headers</code> map.</p>
+</td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Experimental' title='Experimental'></a><a class='trait' href='trait.Header.html'
+                               title='hyper::header::Header'>Header</a></td>
+                        <td class='docblock short'><p>A trait for any object that will represent a header field and value.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "hyper";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
