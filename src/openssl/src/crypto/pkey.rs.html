@@ -456,6 +456,8 @@
 <span id='414'>414</span>
 <span id='415'>415</span>
 <span id='416'>416</span>
+<span id='417'>417</span>
+<span id='418'>418</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_int</span>, <span class='ident'>c_uint</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>mem</span>;
@@ -514,6 +516,8 @@
 <span class='kw'>impl</span> <span class='ident'>PKey</span> {
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new</span>() <span class='op'>-&gt;</span> <span class='ident'>PKey</span> {
         <span class='kw'>unsafe</span> {
+            <span class='ident'>ffi</span>::<span class='ident'>init</span>();
+
             <span class='ident'>PKey</span> {
                 <span class='ident'>evp</span>: <span class='ident'>ffi</span>::<span class='ident'>EVP_PKEY_new</span>(),
                 <span class='ident'>parts</span>: <span class='ident'>Neither</span>,
