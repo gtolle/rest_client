@@ -70,6 +70,17 @@ fn main() {
     }
     
     println!("{}", response.to_string());				  
+    
+    /*
+      All of the underlying errors are passed up through 
+      the RestError struct in the Result.
+      
+      pub enum RestError {
+        UrlParseError(ParseError),
+        HttpRequestError(HttpError),
+        HttpIoError(IoError)
+      }
+    */
 }
 
 #[deriving(Decodable, Encodable)]
