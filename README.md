@@ -130,6 +130,8 @@ Examples
 TODO
 ----
 
+* Add support for custom request headers
+* Built-in JSON serialization
 * Examine what parts of Hyper should get re-exposed
 * Add support for cookies
 * Extend hyper to support basic auth (lots of APIs need it)
