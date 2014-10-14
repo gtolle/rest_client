@@ -42,7 +42,7 @@ impl RestClient {
     pub fn patch(url_str:&str, body:&str, content_type:&str) -> Result<Response, RestError> {
         RestClient::pstar( Patch, url_str, body, content_type )
     }
-
+    
     pub fn put_with_params(url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
         RestClient::pstar_with_params( Put, url_str, params )
     }
@@ -51,7 +51,15 @@ impl RestClient {
         RestClient::pstar( Put, url_str, body, content_type )
     }
 
-    pub fn pstar_with_params( method:hyper::method::Method, url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
+    pub fn delete(url_str:&str) -> Result<Response, RestError> {
+        RestClient::new(Delete, url_str, None, None, None)
+    }
+
+    pub fn delete_with_params(url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
+        RestClient::new(Delete, url_str, Some(params), None, None)
+    }    
+
+    fn pstar_with_params( method:hyper::method::Method, url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
         let mut params_vec = Vec::new();
         for param in params.iter() {
             params_vec.push(*param);
@@ -62,17 +70,9 @@ impl RestClient {
         RestClient::pstar( method, url_str, post_body.as_slice(), "application/x-www-form-urlencoded" )
     }
 
-    pub fn pstar(method:hyper::method::Method, url_str:&str, body:&str, content_type:&str) -> Result<Response, RestError> {
+    fn pstar(method:hyper::method::Method, url_str:&str, body:&str, content_type:&str) -> Result<Response, RestError> {
         RestClient::new( method, url_str, None, Some(body), Some(content_type) )
     }
-
-    pub fn delete(url_str:&str) -> Result<Response, RestError> {
-        RestClient::new(Delete, url_str, None, None, None)
-    }
-
-    pub fn delete_with_params(url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
-        RestClient::new(Delete, url_str, Some(params), None, None)
-    }    
 
     pub fn new(method:hyper::method::Method, url_str:&str, url_params:Option<&[(&str, &str)]>, body:Option<&str>, content_type:Option<&str>) -> Result<Response, RestError> {
         let mut url = match Url::parse(url_str) {
