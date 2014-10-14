@@ -14,7 +14,7 @@ Usage
 extern crate rest_client;
 extern crate serialize;
 
-// one simple 'use' to get all the functionality, plus the 'extern crate'
+// One simple 'use' to get all the functionality, plus the 'extern crate'.
 use rest_client::RestClient;
 
 use serialize::json;
