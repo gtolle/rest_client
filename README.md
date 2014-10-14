@@ -49,7 +49,9 @@ fn main() {
                                     json::encode(&object).as_slice(), 
                                     "application/json").unwrap());
 
-    // You can delete a resource as well. It's just a DELETE.
+    // PUT and PATCH are supported as well, just like POST.
+    
+    // You can delete a resource with a simple DELETE. delete_with_params works too.
     
     println!("{}", RestClient::delete("http://example.com/resource").unwrap());
     
@@ -98,10 +100,12 @@ Examples
     println!("{}", RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap());
 
     let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
+    
     let response_json = json::from_str(response.body.as_slice()).unwrap();
-    println!("{}", response_json.find(&"data".to_string()).unwrap()
-                                .find(&"children".to_string()));
 
+    println!("{}", response_json.find(&"data".to_string()).unwrap()
+                                .find(&"children".to_string()).unwrap());
+    
     println!("{}", RestClient::post_with_params("http://www.reddit.com/api/login.json", 
                                                 [("api_type", "json"),
                                                  ("user", "myusername"),
