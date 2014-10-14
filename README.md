@@ -28,6 +28,7 @@ fn main() {
     println!("{}", RestClient::get("http://example.com/resource").unwrap());
     
     // You can use an array of tuples to create a GET with query parameters.
+    // The client handles all the URL-encoding and escaping for you.
     
     println!("{}", RestClient::get_with_params("http://example.com/resource", 
                                                [("id", "50"), ("foo", "bar")]).unwrap());
