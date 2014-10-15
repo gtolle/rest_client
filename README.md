@@ -14,7 +14,7 @@ Usage
 
 First, add the dependency to your `Cargo.toml`:
 
-```
+```toml
 [dependencies.rest_client]
 
 git = "https://github.com/gtolle/rest_client"
@@ -22,7 +22,7 @@ git = "https://github.com/gtolle/rest_client"
 
 Then, `cargo update`, write your code, `cargo build`, `cargo run`, etc.
 
-```
+```rust
 extern crate rest_client;
 extern crate serialize;
 
@@ -109,7 +109,7 @@ pub struct TestStruct  {
 Examples
 --------
 
-```
+```rust
     println!("{}", RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap());
 
     let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
