@@ -160,6 +160,24 @@ pub enum RestError {
     HttpIoError(IoError)
 }
 
-#[test]
-fn it_works() {
+#[cfg(test)]
+mod test {
+    extern crate rest_client;
+    extern crate serialize;
+    use self::rest_client::RestClient;
+    use self::serialize::json;
+
+    #[test]
+    fn test_get() {
+        let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
+        let response_json = json::from_str(response.body.as_slice()).unwrap();
+        assert!(response_json.find(&"data".to_string()).unwrap().find(&"children".to_string()).unwrap().as_list().unwrap().len() == 1);
+    }
+    
+    #[test]
+    fn test_get_with_params() {
+        let response = RestClient::get_with_params("http://www.reddit.com/hot.json", [("limit", "1")]).unwrap();
+        let response_json = json::from_str(response.body.as_slice()).unwrap();
+        assert!(response_json.find(&"data".to_string()).unwrap().find(&"children".to_string()).unwrap().as_list().unwrap().len() == 1);
+    }
 }
