@@ -60,12 +60,7 @@ impl RestClient {
     }    
 
     fn pstar_with_params( method:hyper::method::Method, url_str:&str, params:&[(&str, &str)]) -> Result<Response, RestError> {
-        let mut params_vec = Vec::new();
-        for param in params.iter() {
-            params_vec.push(*param);
-        }
-
-        let post_body = url::form_urlencoded::serialize(params_vec.into_iter(), None);
+        let post_body = url::form_urlencoded::serialize(params.to_vec().into_iter(), None);
 
         RestClient::pstar( method, url_str, post_body.as_slice(), "application/x-www-form-urlencoded" )
     }
@@ -82,13 +77,8 @@ impl RestClient {
 
         match url_params {
             Some(params) => {
-                let mut params_vec = Vec::new();
-                for param in params.iter() {
-                    params_vec.push(*param);
-                }
-                
                 // TODO: write article talking about iter() vs into_iter()
-                url.set_query_from_pairs(params_vec.into_iter());
+                url.set_query_from_pairs(params.to_vec().into_iter());
             },
             None => ()
         };
