@@ -5,7 +5,7 @@ A simple HTTP and REST client for Rust, inspired by Ruby's [rest-client](https:/
 
 The goal: make common REST requests with the fewest lines of code.
 
-Built on top of the Hyper HTTP library.
+Built on top of the [Hyper](https://github.com/hyperium/hyper) HTTP library.
 
 [Full API Documentation](https://gtolle.github.com/rest_client)
 
