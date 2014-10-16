@@ -7,10 +7,22 @@ The goal: make common REST requests with the fewest lines of code.
 
 Built on top of the Hyper HTTP library.
 
+[Full API Documentation](https://gtolle.github.com/rest_client)
+
 Usage
 -----
 
+First, add the dependency to your `Cargo.toml`:
+
+```toml
+[dependencies.rest_client]
+
+git = "https://github.com/gtolle/rest_client"
 ```
+
+Then, `cargo update`, write your code, `cargo build`, `cargo run`, etc.
+
+```rust
 extern crate rest_client;
 extern crate serialize;
 
@@ -26,6 +38,7 @@ fn main() {
     println!("{}", RestClient::get("http://example.com/resource").unwrap());
     
     // You can use an array of tuples to create a GET with query parameters.
+    // The client handles all the URL-encoding and escaping for you.
     
     println!("{}", RestClient::get_with_params("http://example.com/resource", 
                                                [("id", "50"), ("foo", "bar")]).unwrap());
@@ -96,7 +109,7 @@ pub struct TestStruct  {
 Examples
 --------
 
-```
+```rust
     println!("{}", RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap());
 
     let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
@@ -117,6 +130,8 @@ Examples
 TODO
 ----
 
+* Add support for custom request headers
+* Built-in JSON serialization?
 * Examine what parts of Hyper should get re-exposed
 * Add support for cookies
 * Extend hyper to support basic auth (lots of APIs need it)
