@@ -24,12 +24,11 @@ Then, `cargo update`, write your code, `cargo build`, `cargo run`, etc.
 
 ```rust
 extern crate rest_client;
-extern crate serialize;
+extern crate rustc_serialize;
 
 // One simple 'use' to get all the functionality, plus the 'extern crate'.
 use rest_client::RestClient;
-
-use serialize::json;
+use rustc_serialize::json;
 
 fn main() {
     
@@ -40,15 +39,15 @@ fn main() {
     // You can use an array of tuples to create a GET with query parameters.
     // The client handles all the URL-encoding and escaping for you.
     
-    println!("{}", RestClient::get_with_params("http://example.com/resource", 
-                                               [("id", "50"), ("foo", "bar")]).unwrap());
+    println!("{}", RestClient::get_with_params("http://example.com/resource",
+                                               &[("id", "50"), ("foo", "bar")]).unwrap());
 
     // You can also use an array of tuples to create a POST with form parameters. 
     // The client sets the content-type to application/x-www-form-urlencoded for you.
     
     println!("{}", RestClient::post_with_params("http://example.com/resource",
-                                                [("param1", "one"), 
-                                                 ("param2", "two")]).unwrap());
+                                                &[("param1", "one"), 
+                                                  ("param2", "two")]).unwrap());
 
     // You can POST a string or a JSON object with just a string and a MIME type.
     
@@ -59,7 +58,7 @@ fn main() {
     };
     
     println!("{}", RestClient::post("http://example.com/resource",
-                                    json::encode(&object).as_slice(), 
+                                    &json::encode(&object).unwrap(), 
                                     "application/json").unwrap());
 
     // PUT and PATCH are supported as well, just like POST.
@@ -78,7 +77,7 @@ fn main() {
     
     let response = RestClient::get("http://example.com/resource").unwrap();
     
-    println!("{:d}", response.code); // -> 404
+    println!("{}", response.code); // -> 404
     
     for header in response.headers.iter() {
         println!("{}", header); // -> (Cache-Control, max-age=604800) ...
@@ -114,16 +113,17 @@ Examples
 
     let response = RestClient::get("http://www.reddit.com/hot.json?limit=1").unwrap();
     
-    let response_json = json::from_str(response.body.as_slice()).unwrap();
+    let response_json = Json::from_str(&response.body).unwrap();
 
-    println!("{}", response_json.find(&"data".to_string()).unwrap()
-                                .find(&"children".to_string()).unwrap());
-    
+    println!("{}", response_json.as_object().unwrap()
+                                .get(&"data".to_string()).unwrap().as_object().unwrap()
+                                .get(&"children".to_string()).unwrap());
+
     println!("{}", RestClient::post_with_params("http://www.reddit.com/api/login.json", 
-                                                [("api_type", "json"),
-                                                 ("user", "myusername"),
-                                                 ("passwd", "mypassword"),
-                                                 ("rem", "True")]).unwrap());
+                                                &[("api_type", "json"),
+                                                  ("user", "myusername"),
+                                                  ("passwd", "mypassword"),
+                                                  ("rem", "True")]).unwrap());
 
 ```
 
