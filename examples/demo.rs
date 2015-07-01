@@ -1,14 +1,14 @@
 extern crate rest_client;
-extern crate serialize;
+extern crate rustc_serialize;
 
 use rest_client::RestClient;
-use serialize::json;
+use rustc_serialize::json;
 
 fn main() {
     println!("{}", RestClient::get("http://example.com/resource").unwrap());
     
     println!("{}", RestClient::get_with_params("http://example.com/resource", 
-                                               [("id", "50"), ("foo", "bar")]).unwrap());
+                                               &[("id", "50"), ("foo", "bar")]).unwrap());
     
     let object = TestStruct {
         data_int: 1,
@@ -17,16 +17,16 @@ fn main() {
     };
 
     println!("{}", RestClient::post("http://example.com/resource",
-                                    json::encode(&object).as_slice(), "application/json").unwrap());
+                                    &json::encode(&object).unwrap(), "application/json").unwrap());
   
     println!("{}", RestClient::post_with_params("http://example.com/resource",
-                                                [("param1", "one"), ("param2", "two")]).unwrap());
+                                                &[("param1", "one"), ("param2", "two")]).unwrap());
   
     println!("{}", RestClient::delete("http://example.com/resource").unwrap());
     
     let response = RestClient::get("http://example.com/resource").unwrap();
     
-    println!("{:d}", response.code); // -> 404
+    println!("{}", response.code); // -> 404
     
     for header in response.headers.iter() {
         println!("{}", header); // -> (Cache-Control, max-age=604800) ...
@@ -35,7 +35,7 @@ fn main() {
     println!("{}", response.to_string());				  
 }
 
-#[deriving(Decodable, Encodable)]
+#[derive(RustcDecodable, RustcEncodable)]
 pub struct TestStruct  {
     data_int: u8,
     data_str: String,

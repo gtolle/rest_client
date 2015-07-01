@@ -4,7 +4,11 @@ name = "rest_client"
 version = "0.0.1"
 authors = ["Gilman Tolle <gilman.tolle@gmail.com>"]
 
+[dependencies]
+
+url = "0.2"
+rustc-serialize = "0.3"
+
 [dependencies.hyper]
 
 git = "https://github.com/hyperium/hyper"
-
