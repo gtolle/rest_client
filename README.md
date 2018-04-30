@@ -1,3 +1,8 @@
+### NOTE: Author here - this library is now really out of date, and does not compile anymore. Please don't try to build anything new on top of it.
+
+It won't be updated until I find some time to dig into Rust again and get up to speed with the latest version of the language.
+
+
 Rust REST Client
 ================
 
